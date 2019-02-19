@@ -1,0 +1,13 @@
+
+service: nubank-exporter
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  cron:
+    handler: handler.run
+    events:
+      # Invoke Lambda function every day at 4:00 am
+      - schedule: cron(0 5 * * ? *)

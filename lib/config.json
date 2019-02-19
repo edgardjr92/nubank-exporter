@@ -1,0 +1,12 @@
+{
+    "nubank": {
+        "user":"",
+        "password":"",
+        "discovery_url": "https://prod-s0-webapp-proxy.nubank.com.br/api/discovery"
+    },
+    "organizze": {
+        "user":"",
+        "password":"",
+        "base_url": "https://api.organizze.com.br/rest/v2"
+    }
+}
