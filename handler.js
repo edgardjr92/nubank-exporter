@@ -15,7 +15,7 @@ module.exports.run = async (event, context) => {
   await nu.auth(config.nubank.user, config.nubank.password);
 
   const yesterday = moment(new Date()).subtract(1, 'd').format('YYYY-MM-DD');
-  const purchases = await nu.getCurrentPurchases('2019-02-01');
+  const purchases = await nu.getCurrentPurchases(yesterday);
 
   let response = {
     total: 0,
@@ -42,6 +42,8 @@ module.exports.run = async (event, context) => {
     }
   }
   response.msg = 'SUCCESS';
+  
+  console.log(response);
   return response;
 
 };
